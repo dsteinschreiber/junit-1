@@ -14,6 +14,12 @@ public class MyListTest {
     }
 
     @Test
+    public void isEmptyTest() {
+        assertTrue(MyList.of().isEmpty());
+        assertFalse(MyList.of(1, 2, 3).isEmpty());
+    }
+
+    @Test
     public void rangeTest() {
         assertEquals(MyList.range(1, 1), MyList.of(1));
 
@@ -23,6 +29,12 @@ public class MyListTest {
 
         assertEquals(MyList.range(1, 2, -1), MyList.of(1, 0));
     }
+
+    @Test
+    public void removeTest() {
+        // How?
+    }
+
 
     @Test
     public void getTest() {
@@ -97,6 +109,9 @@ public class MyListTest {
     @Test
     public void allTest() {
         // Need to figure out how to test empty list
+        MyList<Integer> intList = new MyList<>();
+
+        assertTrue(intList.all(value -> value > 0));
 
         assertTrue(MyList.range(2, 10, 2).all(value -> value % 2 == 0));
         assertTrue(MyList.range(1, 10, 2).all(value -> value % 2 != 0));
@@ -106,11 +121,23 @@ public class MyListTest {
 
     @Test
     public void mapTest() {
-//        assertEquals(MyList.of(), MyList.of().map(value -> value + 1));
-//        assertEquals(MyList.of(), MyList.of().recursiveMap(value -> value + 1));
+        MyList<Integer> intList = new MyList<>();
+
+        assertEquals(MyList.of(), intList.map(value -> value + 1));
+        assertEquals(MyList.of(), intList.recursiveMap(value -> value + 1));
 
         assertEquals(MyList.of(1, 2, 3), MyList.of(0, 1, 2).map(value -> value + 1));
         assertEquals(MyList.of(1, 2, 3), MyList.of(0, 1, 2).recursiveMap(value -> value + 1));
+
+        MyList<String> strList = new MyList<>();
+
+        assertEquals(MyList.of(), strList.map(value -> value + value));
+        assertEquals(MyList.of(), strList.recursiveMap(value -> value + value));
+
+//        assertEquals(MyList.of("HelloHello", "WorldWorld"), MyList.of("Hello", "World").map(value -> value + value));
+//        assertEquals(MyList.of("HelloHello", "WorldWorld"), MyList.of("Hello", "World").recursiveMap(value -> value + value));
+
+
     }
 
     @Test
@@ -122,14 +149,18 @@ public class MyListTest {
 
     @Test
     public void takeWhileTest() {
-//        assertEquals(MyList.of(), MyList.of().takeWhile(value -> value > 0));
+        MyList<Integer> intList = new MyList<>();
+
+        assertEquals(MyList.of(), intList.takeWhile(value -> value > 0));
 
         assertEquals(MyList.of(1, 2, 3), MyList.of(1, 2, 3, -1).takeWhile(value -> value > 0));
     }
 
     @Test
     public void filterTest() {
-//        assertEquals(MyList.of(), MyList.of().filter(value -> value > 0));
+        MyList<Integer> intList = new MyList<>();
+
+        assertEquals(MyList.of(), intList.filter(value -> value > 0));
 
         assertEquals(MyList.of(1, 2, 3), MyList.of(-1, -2, -3, 0, 1, 2, 3).filter(value -> value > 0));
     }
