@@ -216,6 +216,19 @@ public class Utils {
         }
         return result;
     }
+
+    public static String concat(MyList<String> strList) {
+        String result = "";
+
+        MyListElement<String> cursor = strList.head;
+
+        while (cursor != null){
+            result = result + cursor.value;
+            cursor = cursor.next;
+        }
+
+        return result;
+    }
 }
 
 

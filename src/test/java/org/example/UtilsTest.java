@@ -114,4 +114,24 @@ public class UtilsTest {
 
         assertEquals(MyList.of(0, 1, 2, 3), filterPositive(MyList.of(-3, -2, -1, 0, 1, 2, 3)));
     }
+
+    @Test
+    public void concatTest() {
+        assertEquals("", concat(MyList.of()));
+
+        assertEquals("HelloWorld", concat(MyList.of("Hello", "World")));
+    }
+
+    @Test
+    public void concatLengthTest() {
+        assertEquals(10,
+                sum(lengths(MyList.of("Hello", "World"))));
+
+        assertEquals(10,
+                sum(MyList.of("Hello", "World").map(value -> value.length())));
+
+        MyList<String> strList = MyList.of("Hello", "World");
+
+        assertEquals(concat(strList).length(), sum(strList.map(value -> value.length())));
+    }
 }
