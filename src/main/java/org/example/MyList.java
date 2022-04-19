@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class MyList<T> {
@@ -460,6 +461,20 @@ public class MyList<T> {
         }
 
         return true;
+    }
+
+    public <V> V reduce(V initialValue, BiFunction <V, T, V> accumulator) {
+        V result = initialValue;
+
+        MyListElement<T> cursor = this.head;
+
+        while (cursor != null){
+            result = accumulator.apply(result, cursor.value);
+            cursor = cursor.next;
+        }
+
+        return result;
+
     }
 
 

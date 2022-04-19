@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import static org.example.Utils.*;
+
 
 public class MyListTest {
 
@@ -163,5 +165,18 @@ public class MyListTest {
         assertEquals(MyList.of(), intList.filter(value -> value > 0));
 
         assertEquals(MyList.of(1, 2, 3), MyList.of(-1, -2, -3, 0, 1, 2, 3).filter(value -> value > 0));
+    }
+
+    @Test
+    public void reduceTest() {
+        assertEquals(6, MyList.of(1, 2, 3)
+                .reduce(0, (result, value) -> result + value));
+
+        assertEquals(10, MyList.of(1, 2, 5)
+                .reduce(1, (result, value) -> result * value));
+
+        assertEquals(concat(MyList.of("Hello", "World")),
+                MyList.of("Hello","World").reduce("",(result,value) -> result + value));
+
     }
 }
