@@ -229,6 +229,44 @@ public class Utils {
 
         return result;
     }
+
+
+    public static MyList<Integer> listSum(MyList<Integer> list1, MyList<Integer> list2) {
+        MyList<Integer> result = new MyList<>();
+
+        MyListElement<Integer> cursor1 = list1.head;
+        MyListElement<Integer> cursor2 = list2.head;
+
+        while (cursor1 != null && cursor2 != null) {
+            result.append(cursor1.value + cursor2.value);
+
+            cursor1 = cursor1.next;
+            cursor2 = cursor2.next;
+        }
+
+        return result;
+    }
+
+
+    // THIS IS IMPORTANT!!!
+    public static MyList<Integer> listSum (MyList<Integer>... lists) {
+        MyList<Integer> result = new MyList<>();
+        MyList<MyListElement<Integer>> cursors = new MyList<>();
+
+
+        // Need multiple cursors
+        for (MyList<Integer> list: lists){
+            cursors.append(list.head);
+        }
+
+        while (cursors.all(value -> value != null)){
+            result.append(sum(cursors.map(value -> value.value)));
+
+            cursors = cursors.map(value -> value.next);
+        }
+
+        return result;
+    }
 }
 
 

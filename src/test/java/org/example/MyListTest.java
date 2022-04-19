@@ -176,7 +176,58 @@ public class MyListTest {
                 .reduce(1, (result, value) -> result * value));
 
         assertEquals(concat(MyList.of("Hello", "World")),
-                MyList.of("Hello","World").reduce("",(result,value) -> result + value));
+                MyList.of("Hello", "World").reduce("", (result, value) -> result + value));
+    }
+
+    @Test
+    public void someTest() {
+        int result = 0;
+        for (int i = 0; i <= 100; i++) {
+            result = result + (i * i);
+        }
+
+
+        assertEquals(sum(MyList.range(1, 100)
+                .map(value -> value * value)), result);
+
 
     }
+
+
+    @Test
+    public void fibonacciTest() {
+        // Fibonacci sequance is (1, 1, 2, 3, 5, 8 ...)
+
+        MyList<Integer> result = new MyList<>();
+//        int limit = 10;
+//        for (int i = 0; i < limit; i++){
+//            if (i == 0 || i == 1){
+//                result.append(1);
+//            } else {
+//                result.append(result.get(i-1).value + result.get(i-2).value);
+//            }
+//        }
+
+        int previous = 1;
+        int beforePrevious = 1;
+
+        result.append(1);
+        result.append(1);
+
+        for (int i = 0; i < 10; i++) {
+            int current = previous + beforePrevious;
+
+            result.append(current);
+
+            beforePrevious = previous;
+            previous = current;
+
+        }
+
+        assertEquals(MyList.of(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144), result);
+
+
+    }
+
+
 }

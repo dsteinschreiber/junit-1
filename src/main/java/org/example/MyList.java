@@ -449,7 +449,7 @@ public class MyList<T> {
         MyListElement<T> cursor2 = that.head;
 
         while (cursor1 != null && cursor2 != null) {
-            if (cursor1.value != cursor2.value) {
+            if (!cursor1.value.equals(cursor2.value)) {
                 return false;
             }
             cursor1 = cursor1.next;
