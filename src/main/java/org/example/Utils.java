@@ -220,12 +220,17 @@ public class Utils {
     public static String concat(MyList<String> strList) {
         String result = "";
 
-        MyListElement<String> cursor = strList.head;
+//        MyListElement<String> cursor = strList.head;
 
-        while (cursor != null){
-            result = result + cursor.value;
-            cursor = cursor.next;
+        for (String value: strList){
+            result = result + value;
         }
+
+//
+//        while (cursor != null){
+//            result = result + cursor.value;
+//            cursor = cursor.next;
+//        }
 
         return result;
     }

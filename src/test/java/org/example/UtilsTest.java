@@ -143,5 +143,6 @@ public class UtilsTest {
         assertEquals(MyList.of(5, 5, 5), listSum(MyList.of(1, 1, 1), MyList.of(2, 2, 2), MyList.of(2, 2, 2)));
         assertEquals(MyList.of(8, 8, 8),
                 listSum(MyList.of(3, 3, 3), MyList.of(1, 1, 1), MyList.of(2, 2, 2), MyList.of(2, 2, 2)));
+
     }
 }

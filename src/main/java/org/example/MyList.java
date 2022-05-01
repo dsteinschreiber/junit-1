@@ -1,9 +1,13 @@
 package org.example;
 
+import java.util.Iterator;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-public class MyList<T> {
+public class MyList<T> implements Iterable<T> {
+
+    public MyListElement<T> head = null;
+
 
     /**
      * List factory
@@ -102,7 +106,6 @@ public class MyList<T> {
         }
     }
 
-    public MyListElement<T> head = null;
 
 
 
@@ -225,7 +228,7 @@ public class MyList<T> {
         }
     }
 
-    /**
+    /*
      * Checks if list contains a value
      *
      * @param value
@@ -478,7 +481,10 @@ public class MyList<T> {
     }
 
 
-
+    @Override
+    public Iterator<T> iterator() {
+        return new MyListIterator<T>(this);
+    }
 }
 
 

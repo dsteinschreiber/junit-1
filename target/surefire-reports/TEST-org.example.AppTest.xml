@@ -1,59 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.example.AppTest" time="0.188" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.example.AppTest" time="0.034" tests="1" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.specification.version" value="11"/>
-    <property name="sun.cpu.isalist" value=""/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/mnt/c/Users/dstei/IdeaProjects/junit-1/target/test-classes:/mnt/c/Users/dstei/IdeaProjects/junit-1/target/classes:/home/dsteins/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/dsteins/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/dsteins/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/dsteins/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/dsteins/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/dsteins/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/dsteins/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/dsteins/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:"/>
-    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\dstei\IdeaProjects\junit-1\target\test-classes;C:\Users\dstei\IdeaProjects\junit-1\target\classes;C:\Users\dstei\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;C:\Users\dstei\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\dstei\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\dstei\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\dstei\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\dstei\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\dstei\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\dstei\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.vendor.url" value="https://ubuntu.com/"/>
-    <property name="user.timezone" value=""/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="America/Chicago"/>
     <property name="java.vm.specification.version" value="11"/>
-    <property name="os.name" value="Linux"/>
+    <property name="os.name" value="Windows 11"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/mnt/c/Users/dstei/IdeaProjects/junit-1/target/surefire/surefirebooter17704255041410688223.jar /mnt/c/Users/dstei/IdeaProjects/junit-1/target/surefire 2022-04-17T17-32-00_900-jvmRun1 surefire14187457458344708848tmp surefire_05218752167020828509tmp"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.14\bin"/>
+    <property name="sun.java.command" value="C:\Users\dstei\AppData\Local\Temp\surefire16183654926109529440\surefirebooter4838996620411625068.jar C:\Users\dstei\AppData\Local\Temp\surefire16183654926109529440 2022-04-20T18-28-27_942-jvmRun1 surefire15438459521083034848tmp surefire_07542170596875301238tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/mnt/c/Users/dstei/IdeaProjects/junit-1/target/test-classes:/mnt/c/Users/dstei/IdeaProjects/junit-1/target/classes:/home/dsteins/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/dsteins/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/dsteins/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/dsteins/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/dsteins/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/dsteins/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/dsteins/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/dsteins/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:"/>
+    <property name="surefire.test.class.path" value="C:\Users\dstei\IdeaProjects\junit-1\target\test-classes;C:\Users\dstei\IdeaProjects\junit-1\target\classes;C:\Users\dstei\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;C:\Users\dstei\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\dstei\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\dstei\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\dstei\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\dstei\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\dstei\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\dstei\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/home/dsteins"/>
+    <property name="user.home" value="C:\Users\dstei"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2022-02-08"/>
-    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
-    <property name="file.separator" value="/"/>
-    <property name="basedir" value="/mnt/c/Users/dstei/IdeaProjects/junit-1"/>
-    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.version.date" value="2022-01-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-11.0.14"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\dstei\IdeaProjects\junit-1"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/mnt/c/Users/dstei/IdeaProjects/junit-1/target/surefire/surefirebooter17704255041410688223.jar"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\dstei\AppData\Local\Temp\surefire16183654926109529440\surefirebooter4838996620411625068.jar"/>
+    <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="11.0.14.1+1-Ubuntu-0ubuntu1.20.04"/>
-    <property name="user.name" value="dsteins"/>
-    <property name="path.separator" value=":"/>
-    <property name="os.version" value="5.10.16.3-microsoft-standard-WSL2"/>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="localRepository" value="/home/dsteins/.m2/repository"/>
-    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
-    <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="java.version" value="11.0.14.1"/>
-    <property name="user.dir" value="/mnt/c/Users/dstei/IdeaProjects/junit-1"/>
+    <property name="java.runtime.version" value="11.0.14+8-LTS-263"/>
+    <property name="user.name" value="dstei"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="C:\Users\dstei\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\dstei\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.14"/>
+    <property name="user.dir" value="C:\Users\dstei\IdeaProjects\junit-1"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="sun.os.patch.level" value="unknown"/>
-    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.vendor" value="Ubuntu"/>
-    <property name="java.vm.version" value="11.0.14.1+1-Ubuntu-0ubuntu1.20.04"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.14\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Foundation\jdk-8.0.302.8-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\dotnet\;C:\Program Files\apache-maven-3.8.5\bin;C:\Users\dstei\AppData\Local\Microsoft\WindowsApps;C:\Users\dstei\.dotnet\tools;C:\Program Files\apache-maven-3.8.5\bin;;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.14+8-LTS-263"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="org.example.AppTest" time="0.13"/>
+  <testcase name="shouldAnswerWithTrue" classname="org.example.AppTest" time="0.027"/>
 </testsuite>
