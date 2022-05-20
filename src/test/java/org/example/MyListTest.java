@@ -1,6 +1,9 @@
 package org.example;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import java.util.Iterator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -225,8 +228,75 @@ public class MyListTest {
         }
 
         assertEquals(MyList.of(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144), result);
+    }
 
+    @Disabled
+    @Test
+    public void justSomeTest() {
+        MyList<Integer> test = MyList.of(1,2,3);
 
+        for (Integer i : test) {
+            System.out.println(i);
+        }
+
+        System.out.println();
+
+        Iterator<Integer> it = test.iterator();
+
+        while (it.hasNext()){
+            Integer i = it.next();
+            System.out.println(i);
+            it.remove();
+        }
+
+        System.out.println();
+
+        System.out.println(test);
+    }
+
+    @Test
+    public void removeIteratorTest1() {
+        MyList<Integer> test = MyList.of(1,2,3);
+
+        Iterator<Integer> it = test.iterator();
+
+        while (it.hasNext()){
+            Integer i = it.next();
+            if (i == 1){
+                it.remove();
+            }
+        }
+        assertEquals(MyList.of(2,3), test);
+    }
+
+    @Test
+    public void removeIteratorTest2() {
+        MyList<Integer> test = MyList.of(1,2,3);
+
+        Iterator<Integer> it = test.iterator();
+
+        while (it.hasNext()){
+            Integer i = it.next();
+            if (i == 2){
+                it.remove();
+            }
+        }
+        assertEquals(MyList.of(1,3), test);
+    }
+
+    @Test
+    public void removeIteratorTest3() {
+        MyList<Integer> test = MyList.of(1,2,3);
+
+        Iterator<Integer> it = test.iterator();
+
+        while (it.hasNext()){
+            Integer i = it.next();
+            if (i == 3){
+                it.remove();
+            }
+        }
+        assertEquals(MyList.of(1,2), test);
     }
 
 

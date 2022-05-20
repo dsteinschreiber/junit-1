@@ -86,7 +86,6 @@ public class MyList<T> implements Iterable<T> {
     }
 
 
-
     /**
      * Appends to list
      *
@@ -105,8 +104,6 @@ public class MyList<T> implements Iterable<T> {
             last.next = newElem;
         }
     }
-
-
 
 
     /**
@@ -132,15 +129,30 @@ public class MyList<T> implements Iterable<T> {
      */
     public void remove(MyListElement<T> elem) {
 
-        MyListElement<T> prev = head;
+//        MyListElement<T> prev = head;
+//
+//        while (prev != null) {
+//            if (prev.next == elem) {
+//                // found it!
+//                prev.next = elem.next;
+//            } else {
+//                prev = prev.next;
+//            }
+//        }
 
-        while (prev != null) {
-            if (prev.next == elem) {
-                // found it!
-                prev.next = elem.next;
-            } else {
-                prev = prev.next;
+        MyListElement<T> cursor = this.head;
+        MyListElement<T> lastCursor = cursor;
+
+        while (cursor != null) {
+            if (cursor == elem) {
+                if (cursor == this.head) {
+                    this.head = cursor.next;
+                } else {
+                    lastCursor.next = cursor.next;
+                }
             }
+            lastCursor = cursor;
+            cursor = cursor.next;
         }
     }
 
@@ -152,7 +164,6 @@ public class MyList<T> implements Iterable<T> {
      */
 
     // when asked for index 0, return head, if none exist return null (request for 5 with only 3 elements)
-
     public MyListElement<T> get(int index) {
 
         MyListElement<T> reference = head;
@@ -239,7 +250,7 @@ public class MyList<T> implements Iterable<T> {
         MyListElement<T> cursor = this.head;
 
         while (cursor != null) {
-            if (cursor.value == value) {
+            if (cursor.value.equals(value)) {
                 contains = true;
                 break;
             }
@@ -438,11 +449,11 @@ public class MyList<T> implements Iterable<T> {
     @Override
     public boolean equals(Object object) {
 
-        if (object == null){
+        if (object == null) {
             return false;
         }
 
-        if (!(object instanceof MyList)){
+        if (!(object instanceof MyList)) {
             return false;
         }
 
@@ -466,12 +477,12 @@ public class MyList<T> implements Iterable<T> {
         return true;
     }
 
-    public <V> V reduce(V initialValue, BiFunction <V, T, V> accumulator) {
+    public <V> V reduce(V initialValue, BiFunction<V, T, V> accumulator) {
         V result = initialValue;
 
         MyListElement<T> cursor = this.head;
 
-        while (cursor != null){
+        while (cursor != null) {
             result = accumulator.apply(result, cursor.value);
             cursor = cursor.next;
         }

@@ -8,6 +8,8 @@ public class MyListIterator<T> implements Iterator<T> {
 
     private MyListElement<T> cursor;
 
+    private MyListElement<T> lastCursor;
+
     public MyListIterator(MyList<T> listInstance){
         this.listInstance = listInstance;
         this.cursor = listInstance.head;
@@ -20,8 +22,17 @@ public class MyListIterator<T> implements Iterator<T> {
 
     @Override
     public T next() {
-        MyListElement<T> lastCursor = this.cursor;
+        this.lastCursor = this.cursor;
         this.cursor = this.cursor.next;
-        return lastCursor.value;
+        return this.lastCursor.value;
+    }
+
+    @Override
+    public void remove() {
+        if (this.lastCursor == null){
+            throw new IllegalStateException();
+        }
+        this.listInstance.remove(this.lastCursor);
+        this.lastCursor = null;
     }
 }
