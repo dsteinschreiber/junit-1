@@ -1,5 +1,7 @@
 package org.example;
 
+
+// Java would call this "MyLists"
 public class Utils {
 
     public static Integer sum(MyList<Integer> integerList) {
